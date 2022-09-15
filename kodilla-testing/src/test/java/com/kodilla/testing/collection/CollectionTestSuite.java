@@ -4,6 +4,7 @@ package com.kodilla.testing.collection;
 import org.junit.jupiter.api.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CollectionTestSuite {
@@ -47,6 +48,10 @@ public class CollectionTestSuite {
     public void testOddNumbersExterminatorNormalList() {
         statement ="When list have 3 even numbers then exterminate should return list containing 3 numbers";
         //Given
+
+        Integer [] filledTestTable  = {1,2,3,4,5,6,0};
+        List<Integer> filledTestList = Arrays.asList(filledTestTable);
+/*
         List<Integer> filledTestList = new ArrayList<>();
         filledTestList.add(1);
         filledTestList.add(2);
@@ -55,7 +60,7 @@ public class CollectionTestSuite {
         filledTestList.add(5);
         filledTestList.add(6);
         filledTestList.add(0);
-
+*/
         //When
 
       OddNumbersExterminator  exterminator  = new OddNumbersExterminator();
@@ -66,5 +71,8 @@ public class CollectionTestSuite {
 
         //Then
         Assertions.assertEquals( testListSize, expectetListSize);
+
+
+
     }
 }
