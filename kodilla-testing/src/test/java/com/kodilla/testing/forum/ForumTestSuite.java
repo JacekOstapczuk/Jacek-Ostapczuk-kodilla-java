@@ -26,3 +26,4 @@ public class ForumTestSuite {                                         // [5]
         Assertions.assertEquals(expectedResult, result);         // [11]
     }
 }
+
