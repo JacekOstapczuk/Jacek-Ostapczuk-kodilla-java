@@ -8,7 +8,8 @@ public class FirstChallenge2 {
               throw new ArithmeticException();
           }
       } catch (ArithmeticException e){
-            System.out.println("Error occurred " + e); }
+            System.out.println("Error occurred " + e);
+      }
 
         return a / b;
     }
