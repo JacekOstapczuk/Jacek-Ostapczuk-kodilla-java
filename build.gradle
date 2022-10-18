@@ -1,19 +1,19 @@
-plugins {
-    id 'java'
-}
+    plugins {
+        id 'java'
+    }
 
-group = 'com.kodilla'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+    group = 'com.kodilla'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '17'
 
-repositories {
-    mavenCentral()
-}
+    repositories {
+        mavenCentral()
+    }
 
-dependencies {
+    dependencies {
 
-}
+    }
 
-tasks.named('test') {
-    useJUnitPlatform()
-}
+    tasks.named('test') {
+        useJUnitPlatform()
+    }
