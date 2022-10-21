@@ -12,9 +12,20 @@ public class CalculateAdvStatistics {
          numberOfUsers = statistics.usersNames().size();
          numberOfPosts = statistics.postsCount();
          numberOfComments = statistics.commentsCount();
-         averagePostPerUser = numberOfPosts / numberOfUsers;
-         averageCommentsPerUser = numberOfComments / numberOfUsers;
-         averageCommentsPerPost = numberOfComments / numberOfPosts;
+
+         if ( numberOfUsers ==0){
+             averagePostPerUser =0;
+             averageCommentsPerUser =0;
+             System.out.println("Brak użytkowników, nie można policzyć statystyk");
+         }  else {
+             averagePostPerUser = numberOfPosts / numberOfUsers;
+             averageCommentsPerUser = numberOfComments / numberOfUsers;
+         }
+
+        if (  numberOfPosts ==0) {
+            averageCommentsPerPost = 0;
+            System.out.println("Brak postów, nie można policzyć statystyk");
+        } else averageCommentsPerPost = numberOfComments / numberOfPosts;
     }
 
     public void showStatistics() {
