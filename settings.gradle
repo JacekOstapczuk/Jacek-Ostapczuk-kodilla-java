@@ -5,4 +5,5 @@ findProject(':kodilla-testing:kodilla-stream')?.name = 'kodilla-stream'
 include 'kodilla-stream'
 include 'kodilla-exception'
 include 'TicTacToe'
+include 'kodilla-good-patterns'
 
