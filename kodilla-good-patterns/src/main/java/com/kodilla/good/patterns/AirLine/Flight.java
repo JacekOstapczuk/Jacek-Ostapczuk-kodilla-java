@@ -67,6 +67,6 @@ public class Flight {
         return "Lot z miasta '" + departureAirport + '\'' +
                 " wylatujący o godzinie " + departureTime +
                 " zmierzający do miasta '" + arrivalAirport + '\'' +
-                " dotrze o godzinie" + arrivalTime;
+                " dotrze o godzinie " + arrivalTime;
     }
 }
