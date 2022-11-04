@@ -1,7 +1,6 @@
 package com.kodilla.good.patterns.AirLine;
 
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 
@@ -12,13 +11,18 @@ public class ConnectingFlights {
     public void connectingFlights(String startingairport, String destinationairport) {
         FlightList flightList = new FlightList();
 
-        FlightsFrom flightsFrom = new FlightsFrom();
-        FlightsTo flightsTo = new FlightsTo();
-        Set<Flight> SetOfStartingAirport = flightsFrom.flightsFrom(startingairport);
-        Set<Flight> SetOfDestinationAirport = flightsTo.flightsTo (destinationairport);
+        List<Flight> ListOfStartingAirport = flightList.flightSet().stream()
+                .filter(sf -> sf.getDepartureAirport().equals(startingairport))
+                .collect(Collectors.toList());
 
-        for (Flight startingFlight : SetOfStartingAirport) {
-            SetOfDestinationAirport.stream()
+        List<Flight> ListOfDestinationAirport = flightList.flightSet().stream()
+                .filter(df -> df.getArrivalAirport().equals(destinationairport))
+                .collect(Collectors.toList());
+
+
+        for (Flight startingFlight : ListOfStartingAirport) {
+
+            ListOfDestinationAirport.stream()
                     .filter(f -> f.getDepartureAirport().equals(startingFlight.arrivalAirport))
                     .forEach(a -> System.out.println("Lot przesiadkowy dla relacji "  + "z " + startingairport + " do " + destinationairport  +
                             "\n" + "jest możliwy poprzez wykonanie poniższych lotów :" +
