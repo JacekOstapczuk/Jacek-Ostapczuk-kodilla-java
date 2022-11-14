@@ -1,5 +1,7 @@
 package com.kodilla.patterns.enums.hotel;
 
+import com.kodilla.patterns.prototype.Board;
+
 public class HotelApp {
 
     public static void main(String[] args) {
@@ -16,6 +18,7 @@ public class HotelApp {
         Season season = Season.HOLIDAY;
 
         System.out.println(season);
+
     }
 
 }
