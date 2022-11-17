@@ -6,24 +6,21 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class BoardConfig {
-
-    @Autowired
-    private Board board( );
-
     @Bean
-    public  TaskList toDoList (){
+    public  TaskList toDoList(){
         return  new  TaskList();
     }
-
     @Bean
-    public  TaskList inProgressList (){
+    public  TaskList inProgressList(){
         return  new  TaskList();
     }
-
     @Bean
-    public  TaskList doneList (){
+    public  TaskList doneList(){
         return  new  TaskList();
     }
-
-
+    @Bean
+    public Board board() {
+        return new  Board (toDoList(), inProgressList(),doneList()  ){
+        };
+    }
 }
