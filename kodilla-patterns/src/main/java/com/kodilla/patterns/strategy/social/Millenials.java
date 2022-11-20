@@ -1,6 +1,6 @@
 package com.kodilla.patterns.strategy.social;
 
-public non-sealed class Millenials  extends  User{
+public final class Millenials  extends  User   {
 
     public Millenials (String userName) {
         super (userName);
