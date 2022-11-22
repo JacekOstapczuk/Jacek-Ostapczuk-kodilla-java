@@ -1,0 +1,72 @@
+    CREATE TABLE ISSUESLISTS
+(
+    ID SERIAL PRIMARY KEY,
+    NAME VARCHAR(100)
+);
+
+CREATE TABLE ISSUES
+(
+    ID SERIAL PRIMARY KEY,
+    ISSUESLIST_ID BIGINT UNSIGNED NOT NULL,
+    SUMMARY VARCHAR(200),
+    DESCRIPTIONOFISSUES VARCHAR(10000),
+    USER_ID_ASSIGNEDTO BIGINT UNSIGNED NOT NULL,
+
+    FOREIGN KEY (ISSUESLIST_ID) REFERENCES ISSUESLISTS(ID),
+    FOREIGN KEY (USER_ID_ASSIGNEDTO) REFERENCES USERS(ID)
+);
+
+    INSERT INTO ISSUESLISTS ( NAME)
+    VALUES ("ToDo");
+    INSERT INTO ISSUESLISTS ( NAME)
+    VALUES ("In progress");
+    INSERT INTO ISSUESLISTS ( NAME)
+    VALUES ( "Done");
+
+    INSERT INTO  ISSUES ( ISSUESLIST_ID, SUMMARY, DESCRIPTIONOFISSUES , USER_ID_ASSIGNEDTO)
+    VALUES (  1, "szybkie podsuwamonie 1" , "opis zadanie nr 1 dla listy TODO List" , 1);
+
+    INSERT INTO  ISSUES ( ISSUESLIST_ID, SUMMARY, DESCRIPTIONOFISSUES  , USER_ID_ASSIGNEDTO)
+    VALUES (  1, "szybkie podsuwamonie 2" , "opis zadanie nr 2 dla listy TODO List" , 1);
+
+    INSERT INTO  ISSUES ( ISSUESLIST_ID, SUMMARY, DESCRIPTIONOFISSUES  , USER_ID_ASSIGNEDTO)
+    VALUES (  1, "szybkie podsuwamonie 3" , "opis zadanie nr 3 dla listy TODO LITO" , 1);
+
+    INSERT INTO  ISSUES ( ISSUESLIST_ID, SUMMARY, DESCRIPTIONOFISSUES  , USER_ID_ASSIGNEDTO)
+    VALUES (  1, "szybkie podsuwamonie 4" , "opis zadanie nr 4 dla listy TODO LITO" , 1);
+
+    INSERT INTO  ISSUES ( ISSUESLIST_ID, SUMMARY,DESCRIPTIONOFISSUES  , USER_ID_ASSIGNEDTO)
+    VALUES (  1, "szybkie podsuwamonie 5" , "opis zadanie nr 5 dla listy TODO LITO" , 1);
+
+
+    INSERT INTO  ISSUES ( ISSUESLIST_ID, SUMMARY,DESCRIPTIONOFISSUES  , USER_ID_ASSIGNEDTO)
+    VALUES (  2, "szybkie podsuwamonie 1" , "opis zadanie nr 1 dla listy inprogres" , 1);
+
+    INSERT INTO  ISSUES ( ISSUESLIST_ID, SUMMARY,DESCRIPTIONOFISSUES  , USER_ID_ASSIGNEDTO)
+    VALUES (  2, "szybkie podsuwamonie 2" , "opis zadanie nr 2 dla listy  inprogres" , 1);
+
+    INSERT INTO  ISSUES ( ISSUESLIST_ID, SUMMARY, DESCRIPTIONOFISSUES , USER_ID_ASSIGNEDTO)
+    VALUES (  2, "szybkie podsuwamonie 3" , "opis zadanie nr 3 dla listy  inprogres" , 1);
+
+    INSERT INTO  ISSUES ( ISSUESLIST_ID, SUMMARY, DESCRIPTIONOFISSUES  , USER_ID_ASSIGNEDTO)
+    VALUES (  2, "szybkie podsuwamonie 4" , "opis zadanie nr 4 dla listy  inprogres" , 1);
+
+    INSERT INTO  ISSUES ( ISSUESLIST_ID, SUMMARY, DESCRIPTIONOFISSUES , USER_ID_ASSIGNEDTO)
+    VALUES (  2, "szybkie podsuwamonie 5" , "opis zadanie nr 5 dla listy  inprogres" , 1);
+
+    INSERT INTO  ISSUES ( ISSUESLIST_ID, SUMMARY, DESCRIPTIONOFISSUES , USER_ID_ASSIGNEDTO)
+    VALUES (  3, "szybkie podsuwamonie 1" , "opis zadanie nr 1 dla listy  DONE" , 1);
+
+    INSERT INTO  ISSUES ( ISSUESLIST_ID, SUMMARY, DESCRIPTIONOFISSUES  , USER_ID_ASSIGNEDTO)
+    VALUES (  3, "szybkie podsuwamonie 2" , "opis zadanie nr 2 dla listy   DONE" , 1);
+
+    INSERT INTO  ISSUES ( ISSUESLIST_ID, SUMMARY,DESCRIPTIONOFISSUES  , USER_ID_ASSIGNEDTO)
+    VALUES (  3, "szybkie podsuwamonie 3" , "opis zadanie nr 3 dla listy  DONE" , 1);
+
+    INSERT INTO  ISSUES ( ISSUESLIST_ID, SUMMARY,DESCRIPTIONOFISSUES , USER_ID_ASSIGNEDTO)
+    VALUES (  3, "szybkie podsuwamonie 4" , "opis zadanie nr 4 dla listy   DONE" , 1);
+
+    INSERT INTO  ISSUES ( ISSUESLIST_ID, SUMMARY, DESCRIPTIONOFISSUES , USER_ID_ASSIGNEDTO)
+    VALUES (  3, "szybkie podsuwamonie 5" , "opis zadanie nr 5 dla listy  DONE" , 1);
+
+COMMIT
