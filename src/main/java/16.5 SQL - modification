@@ -1,0 +1,36 @@
+INSERT INTO POSTS (USER_ID, BODY)
+VALUES (11, "Dodawanie posta w ramach swiczenia");
+
+INSERT INTO POSTS (USER_ID, BODY)
+VALUES (12, "Dodawanie posta w ramach swiczenia2");
+
+INSERT INTO POSTS (USER_ID, BODY)
+VALUES (13, "Dodawanie posta w ramach swiczenia3");
+
+
+UPDATE POSTS
+SET BODY =  "To delete"
+WHERE ID = 19;
+
+UPDATE POSTS
+SET BODY =  "To delete"
+WHERE ID = 20;
+
+UPDATE POSTS
+SET BODY =  "To delete"
+WHERE ID = 21;
+
+
+DELETE FROM POSTS
+WHERE ID=19;
+
+DELETE FROM POSTS
+WHERE ID=20;
+
+DELETE FROM POSTS
+WHERE ID=21;
+
+
+COMMIT;
+
+
