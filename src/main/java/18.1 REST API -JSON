@@ -1,0 +1,27 @@
+{
+"model name" : "Mustang",
+"brand name" : "Ford",
+"car seat": [
+     { "first seat":{
+            "material": "leather",
+            "colour" : "black"
+     }
+        },
+     { "second seat":{
+             "material": "leather",
+             "colour" : "black"
+        }
+     },
+      {"third seat":{
+             "material": "leather",
+             "colour" : "black"
+        }
+      },
+      {"fourth seat":{
+             "material": "leather",
+             "colour" : "black"
+      }
+      }
+],
+"engine capacity": 2300
+}
