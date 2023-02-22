@@ -1,4 +1,4 @@
-package com.kodilla.hibernate.task;
+package com.kodilla.hibernate.invoice.dao.task;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

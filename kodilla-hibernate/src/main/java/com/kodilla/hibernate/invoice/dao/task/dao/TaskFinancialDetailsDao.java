@@ -1,6 +1,6 @@
-package com.kodilla.hibernate.task.dao;
+package com.kodilla.hibernate.invoice.dao.task.dao;
 
-import com.kodilla.hibernate.task.TaskFinancialDetails;
+import com.kodilla.hibernate.invoice.dao.task.TaskFinancialDetails;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import javax.transaction.Transactional;
