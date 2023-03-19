@@ -1,0 +1,32 @@
+ALTER TABLE BOOKS ADD BESTSELLER  BOOLEAN  DEFAULT 0;
+
+
+DELIMITER $$
+CREATE PROCEDURE UpdateBestsellers()
+BEGIN
+
+    DECLARE  NUMBER_OF_RENTS INT;
+    DECLARE ID  INT;
+    DECLARE FINISHED INT DEFAULT 0;
+    DECLARE ALL_BOOK CURSOR FOR SELECT BOOK_ID FROM BOOKS;
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET FINISHED = 1;
+
+    OPEN ALL_BOOK;
+    WHILE (FINISHED = 0) DO
+            FETCH ALL_BOOK INTO ID;
+            IF (FINISHED = 0) THEN
+
+                SELECT   COUNT(*) FROM RENTS
+                           WHERE  BOOK_ID =ID
+                INTO NUMBER_OF_RENTS;
+                IF (NUMBER_OF_RENTS>2) THEN
+                    UPDATE BOOKS SET BESTSELLER =1
+                    WHERE BOOK_ID =ID;
+                    COMMIT ;
+                    END IF;
+                END  IF;
+            END WHILE ;
+    CLOSE  ALL_BOOK;
+END $$
+
+DELIMITER ;
