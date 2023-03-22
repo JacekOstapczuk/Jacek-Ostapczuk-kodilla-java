@@ -13,6 +13,7 @@ dependencies {
 
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.30'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testImplementation 'org.testng:testng:7.1.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
     testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '4.8.0'
 
