@@ -1,0 +1,27 @@
+KOD INDEXU:
+CREATE INDEX BOOKSINDEX ON BOOKS (TITLE);
+
+EXPLAIN SELECT *   FROM  BOOKS
+GROUP BY  TITLE;
+
+
+Zapytanie przed stworzeniem kodu:
+ kodilla_course> SELECT * FROM  READERS
+                  WHERE FIRSTNAME ='JOHN'
+ [2023-03-22 09:30:07] 1 row retrieved starting from 1 in 74 ms (execution: 8 ms, fetching: 66 ms)
+
+KOD INDEXU:
+CREATE INDEX READERSINDEX ON READERS (FIRSTNAME,LASTNAME);
+
+EXPLAIN SELECT *   FROM  READERS
+        GROUP BY  FIRSTNAME;
+
+SELECT * FROM  READERS
+ WHERE FIRSTNAME ='JOHN';
+
+ Zapytanie po stworzeniu kodu indexu:
+ kodilla_course> SELECT * FROM  READERS
+                  WHERE FIRSTNAME ='JOHN'
+ [2023-03-22 09:37:33] 1 row retrieved starting from 1 in 33 ms (execution: 4 ms, fetching: 29 ms)
+
+
