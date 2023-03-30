@@ -2,6 +2,7 @@ package com.kodilla.testing2.config;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebDriverConfig {
@@ -14,7 +15,11 @@ public class WebDriverConfig {
         if (driver.equals(FIREFOX)) {
             return new FirefoxDriver();
         } else if (driver.equals(CHROME)) {
-            return new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+        //    options.setBinary("c:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
+       //     options.addArguments("--remote-allow-origins=*","ignore-certificate-errors");
+            return new ChromeDriver( //options
+                     );
         } else {
             return null;
         }
