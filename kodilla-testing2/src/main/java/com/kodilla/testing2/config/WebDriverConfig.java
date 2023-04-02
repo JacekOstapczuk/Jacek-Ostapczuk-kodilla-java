@@ -16,10 +16,7 @@ public class WebDriverConfig {
             return new FirefoxDriver();
         } else if (driver.equals(CHROME)) {
             ChromeOptions options = new ChromeOptions();
-        //    options.setBinary("c:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
-       //     options.addArguments("--remote-allow-origins=*","ignore-certificate-errors");
-            return new ChromeDriver( //options
-                     );
+            return new ChromeDriver(  );
         } else {
             return null;
         }
